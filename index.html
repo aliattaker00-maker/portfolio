@@ -1,1 +1,165 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Reel - Educational Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Reel container styled like a mobile vertical video */
+        .reel-container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            height: 100%;
+            max-height: 800px;
+            background-color: #111;
+            cursor: pointer;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Video / Background simulation */
+        .reel-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        /* Gradient overlay for text readability */
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            pointer-events: none;
+        }
+
+        /* Instagram UI Elements (Caption, Profile, Action Buttons) */
+        .reel-ui {
+            position: absolute;
+            bottom: 20px;
+            left: 15px;
+            right: 70px;
+            color: white;
+            pointer-events: none;
+        }
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .avatar {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: #555;
+            margin-right: 10px;
+            border: 1px solid #fff;
+        }
+
+        .username {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .caption {
+            font-size: 13px;
+            line-height: 1.4;
+        }
+
+        /* Right side interaction buttons (Like, Comment, Share icons representation) */
+        .side-actions {
+            position: absolute;
+            right: 15px;
+            bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            color: white;
+            pointer-events: none;
+        }
+
+        .action-item {
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .action-icon {
+            font-size: 24px;
+            margin-bottom: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main container acts as the click trigger -->
+    <div class="reel-container" onclick="openTargetSite()">
+        
+        <!-- Simulated Reel Video (Using a sample public vertical video URL) -->
+        <video class="reel-video" autoplay muted loop playsinline>
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-vertical-view-of-a-traffic-at-night-41584-large.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="overlay"></div>
+
+        <!-- Simulated Instagram Reel UI Overlay -->
+        <div class="reel-ui">
+            <div class="user-profile">
+                <div class="avatar"></div>
+                <span class="username">educational_demo</span>
+            </div>
+            <p class="caption">Check out this amazing view! Tap anywhere to see more. 🚀 #trending #explore</p>
+        </div>
+
+        <div class="side-actions">
+            <div class="action-item">
+                <div class="action-icon">❤️</div>
+                <span>12.4K</span>
+            </div>
+            <div class="action-item">
+                <div class="action-icon">💬</div>
+                <span>342</span>
+            </div>
+            <div class="action-item">
+                <div class="action-icon">↗️</div>
+                <span>Share</span>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function openTargetSite() {
+            // Opens Daraz in a new browser tab when the reel is clicked
+            window.open('https://www.daraz.pk', '_blank');
+        }
+    </script>
+
+</body>
+</html>
