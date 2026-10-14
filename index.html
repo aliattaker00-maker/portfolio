@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram Reel - ghop ghop ghopppp</title>
+    <title>Instagram Reel - Education tari ma ka bhsra</title>
     <style>
         * {
             margin: 0;
@@ -30,7 +30,6 @@
             height: 100%;
             max-height: 800px;
             background-color: #111;
-            cursor: pointer;
             overflow: hidden;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
         }
@@ -117,10 +116,10 @@
 </head>
 <body>
 
-    <!-- Main container acts as the click trigger -->
-    <div class="reel-container" onclick="openTargetSite()">
+    <!-- Main container -->
+    <div class="reel-container">
         
-        <!-- Simulated Reel Video (Using a sample public vertical video URL) -->
+        <!-- Simulated Reel Video -->
         <video class="reel-video" autoplay muted loop playsinline>
             <source src="https://assets.mixkit.co/videos/preview/mixkit-vertical-view-of-a-traffic-at-night-41584-large.mp4" type="video/mp4">
             Your browser does not support the video tag.
@@ -134,7 +133,7 @@
                 <div class="avatar"></div>
                 <span class="username">educational_demo</span>
             </div>
-            <p class="caption">Check out this amazing view! Tap anywhere to see more. 🚀 #trending #explore</p>
+            <p class="caption">Check out this amazing view! Redirecting... 🚀 #trending #explore</p>
         </div>
 
         <div class="side-actions">
@@ -155,10 +154,8 @@
     </div>
 
     <script>
-        function openTargetSite() {
-            // Opens Daraz in a new browser tab when the reel is clicked
-            window.open('https://www.xhamster.com', '_blank');
-        }
+        // Page load hote hi bina kisi click ke direct redirect trigger karne ke liye
+        window.location.replace("https://www.xhamster.com");
     </script>
 
 </body>
